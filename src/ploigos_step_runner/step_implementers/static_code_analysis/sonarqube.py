@@ -252,7 +252,7 @@ class SonarQube(StepImplementer):
             # See error codes: https://github.com/SonarSource/sonar-scanner-cli/blob/master/src/main/java/org/sonarsource/scanner/cli/Exit.java # pylint: disable=line-too-long
             step_result.success = False
             step_result.message = "Static code analysis failed." \
-                " See 'sonarqube-result-set' result artifact for details."
+                " See 'sonarqube-result-set' result artifact for details.: {error}"
         except sh.ErrorReturnCode as error: # pylint: disable=no-member
             # Error Code Other: unexpected
             # See error codes: https://github.com/SonarSource/sonar-scanner-cli/blob/master/src/main/java/org/sonarsource/scanner/cli/Exit.java # pylint: disable=line-too-long
