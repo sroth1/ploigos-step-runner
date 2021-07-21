@@ -193,6 +193,7 @@ class SonarQube(StepImplementer):
             if (self.get_value('username')
                     and self.get_value('password')):
                 username = self.get_value('username')
+                print(f"username  ({username})")
                 password = self.get_value('password')
 
         application_name = self.get_value('application-name')
