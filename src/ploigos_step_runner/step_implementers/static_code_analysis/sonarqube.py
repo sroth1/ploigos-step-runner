@@ -184,6 +184,7 @@ class SonarQube(StepImplementer):
         StepResult
             Object containing the dictionary results of this step.
         """
+        print(f" sonar username  ({self.get_value('username')})")
         step_result = StepResult.from_step_implementer(self)
 
         # Optional: username and password
