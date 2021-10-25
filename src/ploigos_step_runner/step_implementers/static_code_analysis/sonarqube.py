@@ -237,7 +237,7 @@ class SonarQube(StepImplementer):
                     f'-Dsonar.login={token}',
                     f'-Dsonar.working.directory={working_directory}',
                     _env={"SONAR_SCANNER_OPTS": f'-Djavax.net.ssl.trustStore={java_truststore}'},
-                    _out=sys.stdout,
+                    _out=sys.stdout: {error},
                     _err=sys.stderr
                 )
             elif username:
