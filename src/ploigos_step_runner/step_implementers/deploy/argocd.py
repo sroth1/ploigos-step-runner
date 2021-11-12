@@ -318,12 +318,12 @@ class ArgoCD(StepImplementer):
                 password=self.get_value('argocd-password'),
                 insecure=self.get_value('argocd-skip-tls')
             )
-            print("Add target cluster to ArgoCD")
-            self.__argocd_add_target_cluster(
-                kube_api=deployment_config_destination_cluster_uri,
-                kube_api_token=deployment_config_destination_cluster_token,
-                kube_api_skip_tls=self.get_value('kube-api-skip-tls')
-            )
+        #    print("Add target cluster to ArgoCD")
+        #    self.__argocd_add_target_cluster(
+        #        kube_api=deployment_config_destination_cluster_uri,
+        #        kube_api_token=deployment_config_destination_cluster_token,
+        #        kube_api_skip_tls=self.get_value('kube-api-skip-tls')
+        #    )
             print(f"Create or update ArgoCD Application ({argocd_app_name})")
             argocd_values_files = []
             argocd_values_files += deployment_config_helm_chart_additional_value_files
